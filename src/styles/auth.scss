@@ -52,6 +52,12 @@ main {
     margin-bottom: 50px;
   }
 
+  h2 {
+    font-size: 24px;
+    margin: 64px 0 24px;
+    font-family: "Poppins", sans-serif;
+  }
+
   form {
     input {
       height: 50px;
@@ -59,6 +65,16 @@ main {
       padding: 0 16px;
       background: #fff;
       border: 1px solid #a8a8b3;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    color: #737380;
+    margin-top: 16px;
+
+    a {
+      color: #e559f9;
     }
   }
 
