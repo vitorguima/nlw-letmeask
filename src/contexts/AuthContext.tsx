@@ -46,7 +46,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   async function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
 
-    const result = await auth.signInWithPopup(provider);
+    const result = await auth.signInWithPopup(provider); //cria o popup para autenticação do usuário
 
     if (result.user) {
       const { displayName, photoURL, uid } = result.user
@@ -64,6 +64,8 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   }
   
   return (
+    //value serve para passar as propriedades existentes no contexto criado
+    // props.children serve para acessar os componentes filhos do AuthContext existentes no App.tsx
     <AuthContext.Provider value={{ user, signInWithGoogle }}>
       {props.children}
     </AuthContext.Provider>
